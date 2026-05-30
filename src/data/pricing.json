@@ -1,0 +1,80 @@
+[
+  {
+    "id": "100m",
+    "label": "100M",
+    "price": "8K",
+    "category": "regular"
+  },
+  {
+    "id": "200m",
+    "label": "200M",
+    "price": "14K",
+    "category": "regular"
+  },
+  {
+    "id": "300m",
+    "label": "300M",
+    "price": "21K",
+    "category": "regular"
+  },
+  {
+    "id": "400m",
+    "label": "400M",
+    "price": "28K",
+    "category": "regular"
+  },
+  {
+    "id": "500m",
+    "label": "500M",
+    "price": "33K",
+    "category": "regular"
+  },
+  {
+    "id": "600m",
+    "label": "600M",
+    "price": "39K",
+    "category": "regular"
+  },
+  {
+    "id": "700m",
+    "label": "700M",
+    "price": "46K",
+    "category": "regular"
+  },
+  {
+    "id": "800m",
+    "label": "800M",
+    "price": "55K",
+    "category": "regular"
+  },
+  {
+    "id": "900m",
+    "label": "900M",
+    "price": "60K",
+    "category": "regular"
+  },
+  {
+    "id": "1b",
+    "label": "1B",
+    "price": "65K",
+    "category": "regular"
+  },
+  {
+    "id": "10b",
+    "label": "10B+",
+    "price": "@64K / 100M",
+    "category": "special"
+  },
+  {
+    "id": "30b",
+    "label": "30B+",
+    "price": "@63K / 100M",
+    "category": "special"
+  },
+  {
+    "id": "500b",
+    "label": "500B+",
+    "price": "@62K / 100M",
+    "category": "special"
+  }
+]

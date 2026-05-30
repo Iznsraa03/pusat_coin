@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* =====================================================
+   PUSAT COIN – GLOBAL DESIGN SYSTEM
+   Color tokens, Scroll Snap, Typography, Animations
+   ===================================================== */
+
+:root {
+  /* -- Color Tokens -- */
+  --bg-primary:   #1E104E;
+  --bg-secondary: #452E5A;
+  --bg-card:      #2a1745;
+  --cta-primary:  #FF653F;
+  --cta-accent:   #FFC85C;
+  --text-body:    #FFFFFF;
+  --text-muted:   #BCA3D0;
+
+  /* -- Glow Effects -- */
+  --glow-gold:   0 0 20px rgba(255, 200, 92, 0.45);
+  --glow-orange: 0 0 20px rgba(255, 101, 63, 0.45);
+}
+
+/* -- Base Reset -- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =====================================================
+   SCROLL SNAP CONTAINER
+   Full-page snap scrolling for landing sections.
+   Each section must be h-screen with snap-align-start.
+   ===================================================== */
+.snap-container {
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;    /* Snap axis: vertical, mandatory stop */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth momentum on iOS */
+}
+
+.snap-section {
+  scroll-snap-align: start;         /* Each section snaps to top */
+  scroll-snap-stop: always;         /* Prevent skipping sections */
+  height: 100dvh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Modal sections do NOT snap */
+.snap-section--free {
+  scroll-snap-align: none;
+  height: auto;
+  overflow: visible;
+}
+
+/* =====================================================
+   FLOATING LOGO ANIMATION (CSS fallback)
+   Used as keyframe base; Framer Motion overrides.
+   ===================================================== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* =====================================================
+   GLASSMORPHISM CARD UTILITY
+   ===================================================== */
+.glass-card {
+  background: rgba(69, 46, 90, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 200, 92, 0.12);
+  border-radius: 1rem;
+}
+
+/* =====================================================
+   GLOW UTILITIES
+   ===================================================== */
+.glow-gold   { box-shadow: var(--glow-gold); }
+.glow-orange { box-shadow: var(--glow-orange); }
+.text-glow-gold {
+  text-shadow: 0 0 16px rgba(255, 200, 92, 0.6);
+}
+
+/* =====================================================
+   SCROLLBAR HIDE (for snap container)
+   ===================================================== */
+.snap-container::-webkit-scrollbar { display: none; }
+.snap-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* =====================================================
+   GRADIENT BACKGROUNDS
+   ===================================================== */
+.bg-hero-gradient {
+  background: radial-gradient(ellipse at 50% 0%, #3d1d7a 0%, #1E104E 60%);
+}
+
+.bg-section-gradient {
+  background: linear-gradient(180deg, #1E104E 0%, #260f52 100%);
+}
+
+/* =====================================================
+   MODAL OVERLAY
+   ===================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 4, 30, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
