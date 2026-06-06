@@ -35,31 +35,16 @@ html, body {
 }
 
 /* =====================================================
-   SCROLL SNAP CONTAINER
-   Full-page snap scrolling for landing sections.
-   Each section must be h-screen with snap-align-start.
+   PAGE SECTIONS
+   Standard flowing full-screen layout classes.
    ===================================================== */
-.snap-container {
-  height: 100dvh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;    /* Snap axis: vertical, mandatory stop */
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* Smooth momentum on iOS */
-}
-
-.snap-section {
-  scroll-snap-align: start;         /* Each section snaps to top */
-  scroll-snap-stop: always;         /* Prevent skipping sections */
-  height: 100dvh;
-  overflow: hidden;
+.page-section {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-}
-
-/* Modal sections do NOT snap */
-.snap-section--free {
-  scroll-snap-align: none;
-  height: auto;
-  overflow: visible;
+  width: 100%;
 }
 
 /* =====================================================
@@ -95,11 +80,7 @@ html, body {
   text-shadow: 0 0 16px rgba(255, 200, 92, 0.6);
 }
 
-/* =====================================================
-   SCROLLBAR HIDE (for snap container)
-   ===================================================== */
-.snap-container::-webkit-scrollbar { display: none; }
-.snap-container { -ms-overflow-style: none; scrollbar-width: none; }
+
 
 /* =====================================================
    GRADIENT BACKGROUNDS

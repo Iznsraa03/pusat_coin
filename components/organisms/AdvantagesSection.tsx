@@ -15,7 +15,7 @@ const advantages = [
 
 export default function AdvantagesSection() {
   return (
-    <section className="snap-section bg-section-gradient flex items-center justify-center px-5 sm:px-8 overflow-hidden relative">
+    <section className="page-section bg-section-gradient flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 overflow-hidden relative">
       {/* Background glow */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF653F]/8 rounded-full blur-3xl" />
 

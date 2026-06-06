@@ -1,6 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import MainLayout from '@/components/templates/MainLayout';
 import HeroSection from '@/components/organisms/HeroSection';
@@ -11,8 +10,6 @@ import Footer from '@/components/organisms/Footer';
 
 export default function Home() {
   const router = useRouter();
-  // Ref for programmatic scroll-snap navigation
-  const snapContainerRef = useRef<HTMLDivElement>(null);
 
   const goToStore = () => {
     router.push('/store');
@@ -20,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <MainLayout snapContainerRef={snapContainerRef}>
+      <MainLayout>
         {/* Section 1 – Hero */}
         <HeroSection onCTA={goToStore} />
 
@@ -33,10 +30,8 @@ export default function Home() {
         {/* Section 4 – FAQ */}
         <FAQSection />
 
-        {/* Section 5 – Footer (free scroll, no snap) */}
-        <div className="snap-section--free">
-          <Footer />
-        </div>
+        {/* Footer */}
+        <Footer />
       </MainLayout>
     </>
   );
