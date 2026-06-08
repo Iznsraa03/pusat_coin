@@ -9,7 +9,7 @@ interface MainLayoutProps {
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <div
-      className="min-h-screen flex flex-col bg-[#1E104E]"
+      className="min-h-screen flex flex-col"
       role="main"
     >
       {children}

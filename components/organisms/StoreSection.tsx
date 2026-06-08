@@ -39,7 +39,7 @@ export default function StoreSection({ onOpenModal }: StoreSectionProps) {
   return (
     <section
       id="store-section"
-      className="w-full min-h-[calc(100vh-80px)] bg-section-gradient flex items-center justify-center px-5 sm:px-8 py-12 relative overflow-hidden"
+      className="w-full min-h-[calc(100vh-80px)] flex items-center justify-center px-5 sm:px-8 py-12 relative overflow-hidden"
     >
       {/* Background orbs */}
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#FF653F]/10 rounded-full blur-3xl" />

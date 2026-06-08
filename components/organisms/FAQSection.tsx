@@ -41,7 +41,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="page-section bg-hero-gradient flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 relative overflow-hidden">
+    <section className="page-section flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 relative overflow-hidden">
       {/* Decorative blur */}
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#FFC85C]/6 rounded-full blur-3xl" />
 

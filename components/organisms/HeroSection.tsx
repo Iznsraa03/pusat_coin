@@ -10,7 +10,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onCTA }: HeroSectionProps) {
   return (
-    <section className="page-section bg-hero-gradient flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 relative overflow-hidden">
+    <section className="page-section flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 relative overflow-hidden">
       {/* Decorative background orbs */}
       <div className="absolute -top-32 -left-32 w-72 h-72 bg-[#FF653F]/10 rounded-full blur-3xl" />
       <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#FFC85C]/8 rounded-full blur-3xl" />

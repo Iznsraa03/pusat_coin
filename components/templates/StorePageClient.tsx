@@ -36,7 +36,7 @@ export default function StorePageClient({ pricingData }: StorePageClientProps) {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#1E104E]">
+    <div className="min-h-screen flex flex-col">
       {/* Premium Header */}
       <header className="sticky top-0 z-50 bg-[#160b3a]/90 backdrop-blur-md border-b border-[#FFC85C]/10 px-5 sm:px-8 py-4">
         <div className="max-w-4xl mx-auto flex items-center justify-between">

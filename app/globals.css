@@ -28,7 +28,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-primary);
+  background: radial-gradient(circle at 50% 0%, #3d1d7a 0%, #1E104E 50%, #120733 100%) no-repeat center center fixed;
+  background-size: cover;
   color: var(--text-body);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -83,15 +84,8 @@ html, body {
 
 
 /* =====================================================
-   GRADIENT BACKGROUNDS
+   GRADIENT BACKGROUNDS (Removed as we now use global body background)
    ===================================================== */
-.bg-hero-gradient {
-  background: radial-gradient(ellipse at 50% 0%, #3d1d7a 0%, #1E104E 60%);
-}
-
-.bg-section-gradient {
-  background: linear-gradient(180deg, #1E104E 0%, #260f52 100%);
-}
 
 /* =====================================================
    MODAL OVERLAY
