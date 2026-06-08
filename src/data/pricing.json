@@ -60,6 +60,18 @@
     "category": "regular"
   },
   {
+    "id": "3b",
+    "label": "3B",
+    "price": "195K",
+    "category": "regular"
+  },
+  {
+    "id": "5b",
+    "label": "5B",
+    "price": "325K",
+    "category": "regular"
+  },
+  {
     "id": "10b",
     "label": "10B+",
     "price": "@64K / 100M",

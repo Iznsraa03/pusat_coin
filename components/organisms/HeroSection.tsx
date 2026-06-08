@@ -1,19 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Button from '@/components/atoms/Button';
 import Image from 'next/image';
+import Link from 'next/link';
 
-interface HeroSectionProps {
-  onCTA: () => void;
-}
-
-export default function HeroSection({ onCTA }: HeroSectionProps) {
+export default function HeroSection() {
   return (
-    <section className="page-section flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 relative overflow-hidden">
-      {/* Decorative background orbs */}
-      <div className="absolute -top-32 -left-32 w-72 h-72 bg-[#FF653F]/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#FFC85C]/8 rounded-full blur-3xl" />
+    <section className="page-section flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 relative overflow-hidden bg-transparent">
 
       <div className="relative z-10 max-w-2xl w-full text-center">
         {/* Badge */}
@@ -25,7 +18,7 @@ export default function HeroSection({ onCTA }: HeroSectionProps) {
         >
           <span className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest
             bg-[#FFC85C]/15 text-[#FFC85C] border border-[#FFC85C]/30">
-            🪙 Top Up Royal Dream Terpercaya
+            Top Up Royal Dream Terpercaya
           </span>
         </motion.div>
 
@@ -80,9 +73,22 @@ export default function HeroSection({ onCTA }: HeroSectionProps) {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="flex justify-center"
         >
-          <Button variant="primary" size="lg" onClick={onCTA}>
-            🛒 Mulai Top Up
-          </Button>
+          <Link href="/store" className="inline-block">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              className="
+                inline-flex items-center justify-center gap-2 cursor-pointer
+                transition-all duration-300 font-semibold tracking-wide
+                bg-[#FF653F] text-white font-bold
+                shadow-[0_0_20px_rgba(255,101,63,0.4)] hover:shadow-[0_0_32px_rgba(255,101,63,0.65)]
+                px-8 py-4 text-lg rounded-2xl
+              "
+            >
+              Jelajahi Toko
+            </motion.span>
+          </Link>
         </motion.div>
 
         {/* Trust indicators */}
@@ -90,11 +96,17 @@ export default function HeroSection({ onCTA }: HeroSectionProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.8 }}
-          className="flex items-center justify-center gap-6 mt-10 text-xs text-[#BCA3D0]"
+          className="flex flex-wrap items-center justify-center gap-4 mt-10 text-xs text-[#BCA3D0]"
         >
-          <span>✅ Proses Cepat</span>
-          <span>🔒 Aman & Terpercaya</span>
-          <span>💬 CS 24 Jam</span>
+          <span className="px-4 py-1.5 rounded-full border border-[#FFC85C]/20 bg-[#452E5A]/15 backdrop-blur-sm shadow-[0_0_12px_rgba(255,200,92,0.15)] transition-all duration-300 hover:border-[#FFC85C]/40 hover:shadow-[0_0_16px_rgba(255,200,92,0.3)] hover:text-white">
+            Proses Cepat
+          </span>
+          <span className="px-4 py-1.5 rounded-full border border-[#FFC85C]/20 bg-[#452E5A]/15 backdrop-blur-sm shadow-[0_0_12px_rgba(255,200,92,0.15)] transition-all duration-300 hover:border-[#FFC85C]/40 hover:shadow-[0_0_16px_rgba(255,200,92,0.3)] hover:text-white">
+            Aman & Terpercaya
+          </span>
+          <span className="px-4 py-1.5 rounded-full border border-[#FFC85C]/20 bg-[#452E5A]/15 backdrop-blur-sm shadow-[0_0_12px_rgba(255,200,92,0.15)] transition-all duration-300 hover:border-[#FFC85C]/40 hover:shadow-[0_0_16px_rgba(255,200,92,0.3)] hover:text-white">
+            CS 24 Jam
+          </span>
         </motion.div>
       </div>
     </section>

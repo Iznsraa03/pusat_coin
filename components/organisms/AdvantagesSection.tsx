@@ -15,9 +15,7 @@ const advantages = [
 
 export default function AdvantagesSection() {
   return (
-    <section className="page-section flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 overflow-hidden relative">
-      {/* Background glow */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-[#FF653F]/8 rounded-full blur-3xl" />
+    <section className="page-section flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 overflow-hidden relative bg-transparent">
 
       <div className="relative z-10 max-w-4xl w-full py-8">
         {/* Section label */}

@@ -1,13 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import StoreSection from '@/components/organisms/StoreSection';
 import Footer from '@/components/organisms/Footer';
-import OrderModal from '@/components/organisms/OrderModal';
-import Button from '@/components/atoms/Button';
+import { motion } from 'framer-motion';
 import type { GameType, PricingItem } from '@/types';
+
+const OrderModal = dynamic(() => import('@/components/organisms/OrderModal'), {
+  ssr: false,
+});
 
 interface StorePageClientProps {
   pricingData: PricingItem[];
@@ -22,8 +26,6 @@ interface StorePageClientProps {
  * oleh Googlebot tanpa memerlukan eksekusi JavaScript client-side.
  */
 export default function StorePageClient({ pricingData }: StorePageClientProps) {
-  const router = useRouter();
-
   // Modal state: menentukan toko mana yang dibuka (Wolf / Panda)
   const [modalOpen, setModalOpen]   = useState(false);
   const [activeGame, setActiveGame] = useState<GameType>('Wolf');
@@ -55,14 +57,22 @@ export default function StorePageClient({ pricingData }: StorePageClientProps) {
             </span>
           </div>
 
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => router.push('/')}
-            className="!text-sm border-none shadow-none text-[#BCA3D0] hover:text-[#FFC85C] hover:bg-transparent"
-          >
-            ← Kembali ke Beranda
-          </Button>
+          <Link href="/">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              className="
+                inline-flex items-center justify-center gap-2 cursor-pointer
+                transition-all duration-300 font-semibold tracking-wide
+                bg-transparent text-[#BCA3D0] hover:text-[#FFC85C]
+                px-4 py-2 text-sm rounded-lg
+                !text-sm border-none shadow-none hover:bg-transparent
+              "
+            >
+              ← Kembali ke Beranda
+            </motion.span>
+          </Link>
         </div>
       </header>
 

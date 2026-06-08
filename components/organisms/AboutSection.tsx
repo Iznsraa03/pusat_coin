@@ -5,10 +5,7 @@ import Logo from '@/components/atoms/Logo';
 
 export default function AboutSection() {
   return (
-    <section className="page-section flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 relative overflow-hidden">
-      {/* Subtle background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-        w-96 h-96 bg-[#FFC85C]/5 rounded-full blur-3xl" />
+    <section className="page-section flex items-center justify-center px-5 sm:px-8 py-16 sm:py-24 relative overflow-hidden bg-transparent">
 
       <div className="relative z-10 max-w-4xl w-full">
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
