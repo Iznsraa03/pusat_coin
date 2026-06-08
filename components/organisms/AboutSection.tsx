@@ -48,7 +48,7 @@ export default function AboutSection() {
             {/* Stats Row */}
             <div className="flex flex-wrap gap-6">
               {[
-                { value: '10.000+', label: 'Transaksi' },
+                { value: '12.847+', label: 'Transaksi' },
                 { value: '99%', label: 'Kepuasan' },
                 { value: '24/7', label: 'Support' },
               ].map((stat) => (
