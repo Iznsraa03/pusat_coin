@@ -5,7 +5,10 @@
 
 import type { GameType, OrderFormData, PricingItem } from '@/types';
 
-const WA_NUMBER = '6282111222333'; // Ganti dengan nomor WA Pusat Coin
+const WA_NUMBERS: Record<GameType, string> = {
+  Wolf: '6287870707324',
+  Panda: '6282245678846',
+};
 
 /**
  * Formats order data into a WhatsApp-ready redirect URL.
@@ -38,5 +41,5 @@ export function generateWAUrl(
   ].join('\n');
 
   const encoded = encodeURIComponent(message);
-  return `https://wa.me/${WA_NUMBER}?text=${encoded}`;
+  return `https://wa.me/${WA_NUMBERS[gameType]}?text=${encoded}`;
 }

@@ -15,7 +15,7 @@ const stores = [
     description: 'Toko utama kami. Harga terbaik untuk semua tier pembelian Royal Dream.',
     iconUrl: '/store/pusatcoin.jpeg',
     behavior: 'redirect' as const,
-    redirectUrl: 'https://wa.me/6282111222333',
+    redirectUrl: 'https://topuproyaldream.live/',
   },
   {
     id: 'wolf',

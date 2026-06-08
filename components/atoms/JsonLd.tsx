@@ -9,7 +9,7 @@
  */
 
 const SITE_URL = 'https://pusatcoin.id';
-const WA_NUMBER = '6281234567890'; // <-- Ganti dengan nomor WhatsApp Pusat Coin yang aktif
+const WA_NUMBER = '6287870707324'; // <-- Menggunakan nomor WhatsApp Wolf sebagai default kontak bisnis
 
 const webSiteSchema = {
   '@context': 'https://schema.org',
